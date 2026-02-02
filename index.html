@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Username Radar (Offline)</title>
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3857/3857421.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div>
+        <h1>Username Radar</h1>
+        <p>Offline generator & ranker. Click to copy, then mark Available/Taken after you check in Discord.</p>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center;">
+      <div class="pill">
+      <span class="dot"></span>
+      <span>Offline Mode</span>
+      </div>
+
+      <a href="https://discord.gg/fZPCTDHx53"
+      target="_blank"
+      class="btn discord-btn">
+      Join Discord
+      </a>
+</div>
+
+    </header>
+
+    <section class="panel">
+      <div class="controls">
+        <div class="field">
+          <label>Mode</label>
+          <select id="mode">
+            <option value="mixed" selected>Mixed (best)</option>
+            <option value="pronounceable">Pronounceable</option>
+            <option value="random">Random Letters</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Length</label>
+          <select id="length">
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Count</label>
+          <input id="count" type="number" min="1" max="200" value="30"/>
+        </div>
+
+        <div class="checks">
+          <label class="chk">
+            <input id="allowDot" type="checkbox"/>
+            <span>Allow dot</span>
+          </label>
+          <label class="chk">
+            <input id="allowDigits" type="checkbox"/>
+            <span>Allow digits</span>
+          </label>
+        </div>
+
+        <button id="scanBtn" class="btn primary">Scan</button>
+        <button id="clearBtn" class="btn">Clear Results</button>
+        <button id="clearHistoryBtn" class="btn danger">Clear History</button>
+        <button id="exportBtn" class="btn">Export CSV</button>
+      </div>
+
+      <div class="radar">
+        <div class="sweep"></div>
+        <div class="grid"></div>
+        <div class="blips" id="blips"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panelHead">
+        <h2>Results</h2>
+        <div class="hint">Tip: click a username to copy. Use the buttons to save + tag.</div>
+      </div>
+      <div id="results" class="list"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panelHead">
+        <h2>History</h2>
+        <div class="filters">
+          <button class="chip active" data-tag="all">All</button>
+          <button class="chip" data-tag="unverified">Unverified</button>
+          <button class="chip" data-tag="available">Available</button>
+          <button class="chip" data-tag="taken">Taken</button>
+        </div>
+      </div>
+      <div id="history" class="list small"></div>
+    </section>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
