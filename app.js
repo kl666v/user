@@ -299,3 +299,41 @@ document.querySelectorAll(".chip").forEach(chip=>{
 // initial
 renderBlips(12);
 loadHistory("all");
+
+// ===== Animated Browser Title (🚀 SneaX#9999) =====
+(function () {
+  const text = "Username Radar by @SneaX#9999🚀";
+  const speedType = 120;   // typing speed
+  const speedDelete = 70;  // delete speed
+  const pauseEnd = 1400;   // pause when full text typed
+  const pauseStart = 500;  // pause when empty
+
+  let i = 0;
+  let deleting = false;
+
+  function animateTitle() {
+    if (!deleting) {
+      i++;
+      document.title = text.slice(0, i);
+
+      if (i === text.length) {
+        deleting = true;
+        setTimeout(animateTitle, pauseEnd);
+        return;
+      }
+      setTimeout(animateTitle, speedType);
+    } else {
+      i--;
+      document.title = text.slice(0, i);
+
+      if (i === 0) {
+        deleting = false;
+        setTimeout(animateTitle, pauseStart);
+        return;
+      }
+      setTimeout(animateTitle, speedDelete);
+    }
+  }
+
+  animateTitle();
+})();
