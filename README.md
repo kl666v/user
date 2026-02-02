@@ -1,6 +1,6 @@
 # 🚀 Username Radar
 
-![Radar Animation]([https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGFkZ2R3dHBrdHJ0eXg1eHV2a3V5a3F5bW5lY2x6Z3p6eXZqNyZlcCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7TKMt1VVNkHV2PaE/giphy.gif](https://assets-v2.lottiefiles.com/a/1e6c9f02-1164-11ee-af2c-abc775c4cc06/YsjQqkqt5z.gif))
+![Radar Animation]([https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGFkZ2R3dHBrdHJ0eXg1eHV2a3V5a3F5bW5lY2x6Z3p6eXZqNyZlcCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7TKMt1VVNkHV2PaE/giphy.gif](https://assets-v2.lottiefiles.com/a/1e6c9f02-1164-11ee-af2c-abc775c4cc06/YsjQqkqt5z.gif]))
 
 ## 🔍 What is Username Radar?
 **Username Radar** is an **offline, safe, and lightweight username generator & ranking tool**  
